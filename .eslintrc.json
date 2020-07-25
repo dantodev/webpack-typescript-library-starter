@@ -1,0 +1,28 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "extends": ["plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": "warn",
+    "no-prototype-builtins": "off"
+  },
+  "ignorePatterns": ["dist/", "*.json"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"],
+      "rules": {
+        "prefer-const": "off"
+      }
+    }
+  ]
+}
